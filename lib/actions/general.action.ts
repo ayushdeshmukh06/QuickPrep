@@ -23,6 +23,7 @@ export async function createFeedback(params: CreateFeedbackParams) {
 
     const completion = await openai.chat.completions.create({
       model: "openai/gpt-3.5-turbo", // free + stable
+      response_format: { type: "json_object" },
       messages: [
         {
           role: "system",
@@ -41,13 +42,33 @@ Evaluate the candidate and return STRICT JSON in this format:
 
 {
   "totalScore": number,
-  "categoryScores": {
-    "communication": number,
-    "technical": number,
-    "problemSolving": number,
-    "culturalFit": number,
-    "confidence": number
+  "categoryScores": [
+  {
+    "name": "Communication",
+    "score": number,
+    "comment": "string"
   },
+  {
+    "name": "Technical Skills",
+    "score": number,
+    "comment": "string"
+  },
+  {
+    "name": "Problem Solving",
+    "score": number,
+    "comment": "string"
+  },
+  {
+    "name": "Cultural Fit",
+    "score": number,
+    "comment": "string"
+  },
+  {
+    "name": "Confidence",
+    "score": number,
+    "comment": "string"
+  }
+],
   "strengths": string[],
   "areasForImprovement": string[],
   "finalAssessment": string

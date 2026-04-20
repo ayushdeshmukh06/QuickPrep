@@ -14,7 +14,7 @@ export async function POST(request: Request) {
 
   try {
     const completion = await openai.chat.completions.create({
-      model: "openai/gpt-3.5-turbo", // free on OpenRouter
+      model: "openai/gpt-4o-mini", // free on OpenRouter
       messages: [
         {
           role: "user",

@@ -213,7 +213,7 @@ const Agent = ({
             <span className="relative">
               {callStatus === "INACTIVE" || callStatus === "FINISHED"
                 ? "Call"
-                : ". . ."}
+                : "Connecting"}
             </span>
           </button>
         ) : (
