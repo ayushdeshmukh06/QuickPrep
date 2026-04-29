@@ -9,7 +9,7 @@
         </p>
         <br />
         <div style="display: flex; gap: 10px;">
-          <a href="https://github.com/ayushdeshmukh06/quickprep">
+          <a href="https://quick-prep-fimx.vercel.app">
             <img src="https://img.shields.io/badge/Live_Demo-0070f3?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo">
           </a>
           <a href="https://github.com/ayushdeshmukh06/quickprep#🏁-getting-started">
